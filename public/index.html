@@ -11,7 +11,7 @@
     <div class="container p-5 max-w-sm h-auto mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl mt-32 relative">
         <div id="login-container" class="w-full border border-slate-500 bg-slate-200 rounded-xl p-5 flex flex-col shadow-2xl transition-all duration-500 ease-in">
             <h1 class="text-center mb-10 font-bold text-xl">- LOG IN -</h1>
-            <form action="submit" class="flex flex-col gap-x-3 mb-8">
+            <form id="login-form" action="submit" class="flex flex-col gap-x-3 mb-8">
                 <div class="mb-5">
                     <label for="user-name" class="block">
                         UserName:
@@ -35,39 +35,48 @@
 
         <div id="signup-container" class="hidden w-full border border-slate-500 bg-slate-200 rounded-xl p-3 shadow-2xl transition-all duration-500 ease-in relative">
             <h1 class="text-center mb-10 font-bold text-xl">- SIGN UP -</h1>
-            <form action="submit" class="flex flex-col gap-x-3 mb-8">
-                <div>
+            <form id="signup-form" action="submit" class="flex flex-col gap-x-3 mb-8">
+                <div class="input-control">
                     <label for="name" class="block">
                         Name:          
                     </label>
-                    <input type="text" placeholder="Your name..."
-                        class="border border-slate-300 rounded-lg p-3 w-full mb-4 bg-slate-50">
+                    <input id="signup-name" type="text" placeholder="Your name..."
+                        class="border border-slate-300 rounded-lg p-3 w-full bg-slate-50">
+                    <p class="error text-red-500"></p>
                 </div>
-                <div>
+                <div class="input-control">
                     <label for="email" class="block">
                         Email:
                     </label>
-                    <input type="email" name="" id="" placeholder="Your email..."
-                        class="border border-slate-300 rounded-lg p-3 w-full mb-4 bg-slate-50">
+                    <input id="signup-email" type="email" name="" id="" placeholder="Your email..."
+                        class="border border-slate-300 rounded-lg p-3 w-full bg-slate-50">
+                    <p class="error text-red-500"></p>               
                 </div>
-                <div>
+                <div class="input-control">
                     <label for="user-name" class="block">
                         UserName:
                     </label>
-                    <input type="text" placeholder="You user name..."
-                        class="border border-slate-300 rounded-lg p-3 w-full mb-4 bg-slate-50">
+                    <input id="signup-username" type="text" placeholder="You user name..."
+                        class="border border-slate-300 rounded-lg p-3 w-full bg-slate-50">
+                    <p class="error text-red-500"></p>
                 </div>
-                <div>
+                <div class="input-control">
                     <label for="password" class="block">
                         Password:
                     </label>
-                    <input type="password" name="" id="" placeholder="Your password..."
-                        class="border border-slate-300 rounded-lg p-3 w-full mb-4 bg-slate-50">
+                    <input id="signup-password" type="password" name="" id="" placeholder="Your password..."
+                        class="border border-slate-300 rounded-lg p-3 w-full bg-slate-50">
+                    <p class="error text-red-500"></p>
                 </div>
-
-                
-                <button class="px-2 py-1 text-sm sm:px-3 sm:py-2 sm:text-lg bg-green-300 hover:bg-green-400 transition-all duration-300 ease-linear rounded-lg">Sign Up</button>
-                    
+                <div class="input-control">
+                    <label for="cpassword" class="block">
+                        Confirm Password:
+                    </label>
+                    <input id="signup-cpassword" type="password" name="" id="" placeholder="Confirm your password..."
+                        class="border border-slate-300 rounded-lg p-3 w-full bg-slate-50">
+                    <p class="error text-red-500"></p>
+                </div>                
+                <button class="px-2 py-1 text-sm sm:px-3 sm:py-2 sm:text-lg bg-green-300 hover:bg-green-400 transition-all duration-300 ease-linear rounded-lg">Sign Up</button>                   
             </form>
                 <button id="go-to-login" class="text-pink-700 text-sm sm:text-md md:text-lg absolute right-7 bottom-3">Go to Login</button>
         </div>

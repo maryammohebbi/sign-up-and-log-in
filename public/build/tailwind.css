@@ -540,9 +540,6 @@ video {
 .mb-10 {
   margin-bottom: 2.5rem;
 }
-.mb-4 {
-  margin-bottom: 1rem;
-}
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -641,6 +638,10 @@ video {
 .text-pink-700 {
   --tw-text-opacity: 1;
   color: rgb(190 24 93 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .text-red-600 {
   --tw-text-opacity: 1;
