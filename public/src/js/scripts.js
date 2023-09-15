@@ -9,11 +9,16 @@ const signUpEmail = document.querySelector("#signup-email")
 const signUpUsername = document.querySelector("#signup-username")
 const signUpPassword = document.querySelector("#signup-password")
 const signUpCpassword = document.querySelector("#signup-cpassword")
+const loginForm = document.querySelector("#login-form")
+const logInUserName = document.querySelector("#login-username")
+const loginPassword = document.querySelector("#login-password")
+
 
 //events
 goToSignUp.addEventListener("click", openSignUp)
 goToLogIn.addEventListener("click", openLogIn)
 signUpForm.addEventListener("submit", validate)
+loginForm.addEventListener("submit", loginUser)
 
 
 //functions
@@ -63,6 +68,24 @@ function validate(e){
     }
 }
 
+function loginUser(e){
+    e.preventDefault();
+    const username = logInUserName.value;
+    const password = loginPassword.value;
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => res.json())
+    .then(users => {
+        const user = users.find(user => user.username == username && user.email == password)
+        if(user){
+            alert(`Welcome ${user.name} !!`)
+        } else {
+            alert("Username or password is invalid!")
+        }
+    })
+    .catch(error => {
+        alert(error)
+    })
+}
 
 function openSignUp(e){
     e.preventDefault();
